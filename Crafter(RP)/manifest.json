@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Crafter RP",
+    "description": "",
+    "version": [1, 0, 0],
+    "uuid": "ca19d53d-652e-495a-8f26-556c4261beca",
+    "min_engine_version": [1, 19, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "description": "",
+      "version": [1, 0, 0],
+      "uuid": "326848a6-6a33-4208-a7b3-1003e0c37023"
+    }
+  ]
+}

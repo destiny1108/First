@@ -1,0 +1,94 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "crafter:crafter_block",
+      "menu_category": { "category": "items" },
+      "properties": {
+        "crafter:face": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "components": {
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "crafter",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:on_player_placing": {
+        "event": "place"
+      },
+      "minecraft:pick_collision": false,
+      "minecraft:block_light_absorption": 0.5,
+      "minecraft:rotation": [
+        0,
+        180,
+        0
+      ],
+
+      "minecraft:unit_cube": {
+
+      }
+    },
+    "events": {
+      "place": {
+        "sequence": [
+          {
+            "run_command": {
+              "target": "block",
+              "command": "summon crafter:crafter ~ ~-0.5 ~ place Crafter"
+            }
+          },
+          {
+            "set_block_property": {
+              "crafter:face": "(query.cardinal_facing_2d)"
+            }
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('crafter:face') == 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('crafter:face') == 2",
+        "components": {
+
+        }
+      },
+      {
+        "condition": "query.block_property('crafter:face') == 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('crafter:face') == 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            270,
+            0
+          ]
+        }
+      }
+    ]
+  }
+}
