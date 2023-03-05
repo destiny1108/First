@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Crafter BP",
+    "description": "",
+    "version": [1, 0, 0],
+    "uuid": "3b78106e-5125-4269-a783-af0d7d137b1b",
+    "min_engine_version": [1, 19, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "description": "",
+      "version": [1, 0, 0],
+      "uuid": "59d3e7c2-0b7a-43bd-aa09-c056cae066d0"
+    }
+  ]
+}
