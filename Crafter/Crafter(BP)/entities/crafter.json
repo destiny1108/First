@@ -8,7 +8,7 @@
       "is_experimental": false
     },
     "component_groups": {
-      "p": {
+      "place": {
 
       }
     },
@@ -99,7 +99,7 @@
       "place": {
         "add": {
           "component_groups": [
-            "p"
+            "place"
           ]
         }
       }
