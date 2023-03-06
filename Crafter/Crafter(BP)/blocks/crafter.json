@@ -5,12 +5,7 @@
       "identifier": "crafter:crafter_block",
       "menu_category": { "category": "items" },
       "properties": {
-        "crafter:face": [
-          2,
-          3,
-          4,
-          5
-        ]
+        "crafter:face": [2, 3, 4, 5]
       }
     },
     "components": {
@@ -25,15 +20,9 @@
       },
       "minecraft:pick_collision": false,
       "minecraft:block_light_absorption": 0.5,
-      "minecraft:rotation": [
-        0,
-        180,
-        0
-      ],
+      "minecraft:rotation": [0, 180, 0],
 
-      "minecraft:unit_cube": {
-
-      }
+      "minecraft:unit_cube": {}
     },
     "events": {
       "place": {
@@ -56,37 +45,23 @@
       {
         "condition": "query.block_property('crafter:face') == 3",
         "components": {
-          "minecraft:rotation": [
-            0,
-            0,
-            0
-          ]
+          "minecraft:rotation": [0, 0, 0]
         }
       },
       {
         "condition": "query.block_property('crafter:face') == 2",
-        "components": {
-
-        }
+        "components": {}
       },
       {
         "condition": "query.block_property('crafter:face') == 5",
         "components": {
-          "minecraft:rotation": [
-            0,
-            90,
-            0
-          ]
+          "minecraft:rotation": [0, 90, 0]
         }
       },
       {
         "condition": "query.block_property('crafter:face') == 4",
         "components": {
-          "minecraft:rotation": [
-            0,
-            270,
-            0
-          ]
+          "minecraft:rotation": [0, 270, 0]
         }
       }
     ]

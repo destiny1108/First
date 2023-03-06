@@ -8,9 +8,7 @@
       "is_experimental": false
     },
     "component_groups": {
-      "place": {
-
-      }
+      "place": {}
     },
     "components": {
       "minecraft:inventory": {
@@ -91,16 +89,12 @@
     "events": {
       "break": {
         "run_command": {
-          "command": [
-            "setblock ~ ~ ~ air 0 destroy"
-          ]
+          "command": ["setblock ~ ~ ~ air 0 destroy"]
         }
       },
       "place": {
         "add": {
-          "component_groups": [
-            "place"
-          ]
+          "component_groups": ["place"]
         }
       }
     }

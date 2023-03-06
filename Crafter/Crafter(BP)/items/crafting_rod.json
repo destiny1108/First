@@ -14,9 +14,6 @@
       "minecraft:hand_equipped": true,
       "minecraft:durability": {
         "max_durability": 0
-      },
-      "minecraft:on_use": {
-
       }
     }
   }
