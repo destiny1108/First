@@ -1,19 +1,18 @@
 import { world } from "@minecraft/server";
 world.events.entityHit.subscribe((ev) => {
-  const entity = ev.entity;
-  const hitEntity = ev.hitEntity;
+  const { entity, hitEntity } = ev;
+  if ( typeof hitEntity === "undefined" ) return; 
   world.say("test");
   if (
     entity.typeId == "minecraft:player" &&
-    hitEntity.entity.typeId == "crafter:crafter"
+    hitEntity.typeId == "crafter:crafter"
   ) {
     world.say(`${entity.typeId}`);
-    world.say(`${hitEntity.entity.typeId}`);
-    const inv = entity.getComponent("minecraft:inventory").container;
+    world.say(`${hitEntity.typeId}`);
+    const inv = entity.getComponent("inventory").container;
     world.say(`${inv.inventorySize}`);
-    const hand = hitEntity.entity
-      .getComponent("minecraft:inventory")
-      .container.getItem(hitEntity.entity.selectedSlot);
+    const hand = hitEntity.getComponent("inventory")
+      .container.getItem(hitEntity.selectedSlot);
     if (hand?.typeId == "crafter:crafting_rod") {
       world.say(`${hand.typeId}`);
       var inv_l;
